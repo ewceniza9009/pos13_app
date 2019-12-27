@@ -1,0 +1,12 @@
+D:\Innosoft\pos13_app\pos13_app_data\pos13_app_data\bin\pos13_app_data.dll.config
+D:\Innosoft\pos13_app\pos13_app_data\pos13_app_data\bin\pos13_app_data.dll
+D:\Innosoft\pos13_app\pos13_app_data\pos13_app_data\bin\pos13_app_data.pdb
+D:\Innosoft\pos13_app\pos13_app_data\pos13_app_data\obj\Debug\pos13_app_data.dll
+D:\Innosoft\pos13_app\pos13_app_data\pos13_app_data\obj\Debug\pos13_app_data.pdb
+D:\Innosoft\pos13_app\pos13_app_data\pos13_app_data\obj\Debug\pos13_app_data.csprojResolveAssemblyReference.cache
+D:\2.Innosoft\POS13\pos13_app\pos13_app_data\pos13_app_data\bin\pos13_app_data.dll.config
+D:\2.Innosoft\POS13\pos13_app\pos13_app_data\pos13_app_data\bin\pos13_app_data.dll
+D:\2.Innosoft\POS13\pos13_app\pos13_app_data\pos13_app_data\bin\pos13_app_data.pdb
+D:\2.Innosoft\POS13\pos13_app\pos13_app_data\pos13_app_data\obj\Debug\pos13_app_data.csprojResolveAssemblyReference.cache
+D:\2.Innosoft\POS13\pos13_app\pos13_app_data\pos13_app_data\obj\Debug\pos13_app_data.dll
+D:\2.Innosoft\POS13\pos13_app\pos13_app_data\pos13_app_data\obj\Debug\pos13_app_data.pdb

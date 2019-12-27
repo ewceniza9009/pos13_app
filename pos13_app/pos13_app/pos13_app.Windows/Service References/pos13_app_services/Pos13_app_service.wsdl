@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Pos13_app_service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:20644/pos13_app_services.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:20644/pos13_app_services.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:20644/pos13_app_services.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/pos13_app_data" />
+      <xsd:import schemaLocation="http://localhost:20644/pos13_app_services.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" />
+      <xsd:import schemaLocation="http://localhost:20644/pos13_app_services.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/pos13_app_data.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPos13_app_service_getUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserName" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_getUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_getUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserId" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_getUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_isLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:isLogin" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_isLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_UserCombo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserCombo" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_UserCombo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserComboResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_GetMstTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMstTable" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_GetMstTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMstTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_GetMstTableGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMstTableGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_GetMstTableGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMstTableGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_MinTableGroupId_InputMessage">
+    <wsdl:part name="parameters" element="tns:MinTableGroupId" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_MinTableGroupId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MinTableGroupIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_TrnSalesOrderListSF1_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrnSalesOrderListSF1" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_TrnSalesOrderListSF1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrnSalesOrderListSF1Response" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_TrnSalesOrderDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrnSalesOrderDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_TrnSalesOrderDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrnSalesOrderDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_TrnSalesOrderDetailZero_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrnSalesOrderDetailZero" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_TrnSalesOrderDetailZero_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrnSalesOrderDetailZeroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_GetTableInvoiceId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTableInvoiceId" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_GetTableInvoiceId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTableInvoiceIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_TrnSalesOrderDetailItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrnSalesOrderDetailItem" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_TrnSalesOrderDetailItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrnSalesOrderDetailItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_TrnSalesTrnSalesOrderDetailItemDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrnSalesTrnSalesOrderDetailItemDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_TrnSalesTrnSalesOrderDetailItemDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrnSalesTrnSalesOrderDetailItemDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_GetMstItemGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMstItemGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_GetMstItemGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMstItemGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_MinItemGroupId_InputMessage">
+    <wsdl:part name="parameters" element="tns:MinItemGroupId" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_MinItemGroupId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MinItemGroupIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_GetMstItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMstItem" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_GetMstItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMstItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_ItemComboBox_InputMessage">
+    <wsdl:part name="parameters" element="tns:ItemComboBox" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_ItemComboBox_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ItemComboBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_UnitCombo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnitCombo" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_UnitCombo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnitComboResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_TaxCombo_InputMessage">
+    <wsdl:part name="parameters" element="tns:TaxCombo" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_TaxCombo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TaxComboResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_DiscountCombo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DiscountCombo" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_DiscountCombo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DiscountComboResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_CustomerCombo_InputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerCombo" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_CustomerCombo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerComboResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_TermCombo_InputMessage">
+    <wsdl:part name="parameters" element="tns:TermCombo" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_TermCombo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TermComboResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_InserSalesOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserSalesOrder" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_InserSalesOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserSalesOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_UpdateInvoiceTotalAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInvoiceTotalAmount" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_UpdateInvoiceTotalAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInvoiceTotalAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_DeleteSales_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSales" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_DeleteSales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_InsertSalesOrderLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSalesOrderLine" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_InsertSalesOrderLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSalesOrderLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_DeleteSalesLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSalesLine" />
+  </wsdl:message>
+  <wsdl:message name="IPos13_app_service_DeleteSalesLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSalesLineResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPos13_app_service">
+    <wsdl:operation name="getUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/getUserName" message="tns:IPos13_app_service_getUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/getUserNameResponse" message="tns:IPos13_app_service_getUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/getUserId" message="tns:IPos13_app_service_getUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/getUserIdResponse" message="tns:IPos13_app_service_getUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/isLogin" message="tns:IPos13_app_service_isLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/isLoginResponse" message="tns:IPos13_app_service_isLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserCombo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/UserCombo" message="tns:IPos13_app_service_UserCombo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/UserComboResponse" message="tns:IPos13_app_service_UserCombo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMstTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/GetMstTable" message="tns:IPos13_app_service_GetMstTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/GetMstTableResponse" message="tns:IPos13_app_service_GetMstTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMstTableGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/GetMstTableGroup" message="tns:IPos13_app_service_GetMstTableGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/GetMstTableGroupResponse" message="tns:IPos13_app_service_GetMstTableGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MinTableGroupId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/MinTableGroupId" message="tns:IPos13_app_service_MinTableGroupId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/MinTableGroupIdResponse" message="tns:IPos13_app_service_MinTableGroupId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrnSalesOrderListSF1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/TrnSalesOrderListSF1" message="tns:IPos13_app_service_TrnSalesOrderListSF1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/TrnSalesOrderListSF1Response" message="tns:IPos13_app_service_TrnSalesOrderListSF1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrnSalesOrderDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/TrnSalesOrderDetail" message="tns:IPos13_app_service_TrnSalesOrderDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/TrnSalesOrderDetailResponse" message="tns:IPos13_app_service_TrnSalesOrderDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrnSalesOrderDetailZero">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/TrnSalesOrderDetailZero" message="tns:IPos13_app_service_TrnSalesOrderDetailZero_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/TrnSalesOrderDetailZeroResponse" message="tns:IPos13_app_service_TrnSalesOrderDetailZero_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTableInvoiceId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/GetTableInvoiceId" message="tns:IPos13_app_service_GetTableInvoiceId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/GetTableInvoiceIdResponse" message="tns:IPos13_app_service_GetTableInvoiceId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrnSalesOrderDetailItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/TrnSalesOrderDetailItem" message="tns:IPos13_app_service_TrnSalesOrderDetailItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/TrnSalesOrderDetailItemResponse" message="tns:IPos13_app_service_TrnSalesOrderDetailItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrnSalesTrnSalesOrderDetailItemDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/TrnSalesTrnSalesOrderDetailItemDetail" message="tns:IPos13_app_service_TrnSalesTrnSalesOrderDetailItemDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/TrnSalesTrnSalesOrderDetailItemDetailResponse" message="tns:IPos13_app_service_TrnSalesTrnSalesOrderDetailItemDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMstItemGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/GetMstItemGroup" message="tns:IPos13_app_service_GetMstItemGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/GetMstItemGroupResponse" message="tns:IPos13_app_service_GetMstItemGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MinItemGroupId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/MinItemGroupId" message="tns:IPos13_app_service_MinItemGroupId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/MinItemGroupIdResponse" message="tns:IPos13_app_service_MinItemGroupId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMstItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/GetMstItem" message="tns:IPos13_app_service_GetMstItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/GetMstItemResponse" message="tns:IPos13_app_service_GetMstItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ItemComboBox">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/ItemComboBox" message="tns:IPos13_app_service_ItemComboBox_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/ItemComboBoxResponse" message="tns:IPos13_app_service_ItemComboBox_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnitCombo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/UnitCombo" message="tns:IPos13_app_service_UnitCombo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/UnitComboResponse" message="tns:IPos13_app_service_UnitCombo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TaxCombo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/TaxCombo" message="tns:IPos13_app_service_TaxCombo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/TaxComboResponse" message="tns:IPos13_app_service_TaxCombo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DiscountCombo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/DiscountCombo" message="tns:IPos13_app_service_DiscountCombo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/DiscountComboResponse" message="tns:IPos13_app_service_DiscountCombo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerCombo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/CustomerCombo" message="tns:IPos13_app_service_CustomerCombo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/CustomerComboResponse" message="tns:IPos13_app_service_CustomerCombo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TermCombo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/TermCombo" message="tns:IPos13_app_service_TermCombo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/TermComboResponse" message="tns:IPos13_app_service_TermCombo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserSalesOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/InserSalesOrder" message="tns:IPos13_app_service_InserSalesOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/InserSalesOrderResponse" message="tns:IPos13_app_service_InserSalesOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInvoiceTotalAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/UpdateInvoiceTotalAmount" message="tns:IPos13_app_service_UpdateInvoiceTotalAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/UpdateInvoiceTotalAmountResponse" message="tns:IPos13_app_service_UpdateInvoiceTotalAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/DeleteSales" message="tns:IPos13_app_service_DeleteSales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/DeleteSalesResponse" message="tns:IPos13_app_service_DeleteSales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSalesOrderLine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/InsertSalesOrderLine" message="tns:IPos13_app_service_InsertSalesOrderLine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/InsertSalesOrderLineResponse" message="tns:IPos13_app_service_InsertSalesOrderLine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSalesLine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPos13_app_service/DeleteSalesLine" message="tns:IPos13_app_service_DeleteSalesLine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPos13_app_service/DeleteSalesLineResponse" message="tns:IPos13_app_service_DeleteSalesLine_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPos13_app_service" type="tns:IPos13_app_service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getUserName">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/getUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserId">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/getUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isLogin">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/isLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserCombo">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/UserCombo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMstTable">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/GetMstTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMstTableGroup">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/GetMstTableGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MinTableGroupId">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/MinTableGroupId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrnSalesOrderListSF1">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/TrnSalesOrderListSF1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrnSalesOrderDetail">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/TrnSalesOrderDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrnSalesOrderDetailZero">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/TrnSalesOrderDetailZero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTableInvoiceId">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/GetTableInvoiceId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrnSalesOrderDetailItem">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/TrnSalesOrderDetailItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrnSalesTrnSalesOrderDetailItemDetail">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/TrnSalesTrnSalesOrderDetailItemDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMstItemGroup">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/GetMstItemGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MinItemGroupId">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/MinItemGroupId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMstItem">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/GetMstItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ItemComboBox">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/ItemComboBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnitCombo">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/UnitCombo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaxCombo">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/TaxCombo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DiscountCombo">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/DiscountCombo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerCombo">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/CustomerCombo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TermCombo">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/TermCombo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserSalesOrder">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/InserSalesOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInvoiceTotalAmount">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/UpdateInvoiceTotalAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSales">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/DeleteSales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSalesOrderLine">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/InsertSalesOrderLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSalesLine">
+      <soap:operation soapAction="http://tempuri.org/IPos13_app_service/DeleteSalesLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Pos13_app_service">
+    <wsdl:port name="BasicHttpBinding_IPos13_app_service" binding="tns:BasicHttpBinding_IPos13_app_service">
+      <soap:address location="http://localhost:20644/pos13_app_services.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

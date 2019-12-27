@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="pos13_app_data.Pos13_app_service" CodeBehind="pos13_app_services.svc.cs" %>

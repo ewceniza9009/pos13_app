@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/pos13_app_data.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/pos13_app_data.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfMstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MstItem" nillable="true" type="tns:MstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMstItem" nillable="true" type="tns:ArrayOfMstItem" />
+  <xs:complexType name="MstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutTaxId" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="VatRate" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MstItem" nillable="true" type="tns:MstItem" />
+</xs:schema>

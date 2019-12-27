@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:20644/pos13_app_services.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/pos13_app_data" />
+  <xs:import schemaLocation="http://localhost:20644/pos13_app_services.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" />
+  <xs:import schemaLocation="http://localhost:20644/pos13_app_services.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/pos13_app_data.Models" />
+  <xs:element name="getUserName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getUserNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getUserIdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isLoginResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserCombo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserComboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/pos13_app_data" minOccurs="0" name="UserComboResult" nillable="true" type="q1:ArrayOfMstUserController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMstTable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TableGroupId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMstTableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" minOccurs="0" name="GetMstTableResult" nillable="true" type="q2:ArrayOfMstTableController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMstTableGroup">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMstTableGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" minOccurs="0" name="GetMstTableGroupResult" nillable="true" type="q3:ArrayOfMstTableGroupController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MinTableGroupId">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MinTableGroupIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MinTableGroupIdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnSalesOrderListSF1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="InvoiceStatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnSalesOrderListSF1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" minOccurs="0" name="TrnSalesOrderListSF1Result" nillable="true" type="q4:ArrayOfTrnSalesOrderController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnSalesOrderDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InvoiceId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnSalesOrderDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" minOccurs="0" name="TrnSalesOrderDetailResult" nillable="true" type="q5:ArrayOfTrnSalesOrderController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnSalesOrderDetailZero">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InvoiceId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnSalesOrderDetailZeroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" minOccurs="0" name="TrnSalesOrderDetailZeroResult" nillable="true" type="q6:ArrayOfTrnSalesOrderController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTableInvoiceId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TableId" type="xs:int" />
+        <xs:element minOccurs="0" name="InvoiceStatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTableInvoiceIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTableInvoiceIdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnSalesOrderDetailItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnSalesOrderDetailItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" minOccurs="0" name="TrnSalesOrderDetailItemResult" nillable="true" type="q7:ArrayOfTrnSalesOrderDetailController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnSalesTrnSalesOrderDetailItemDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InvoiceLineId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnSalesTrnSalesOrderDetailItemDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" minOccurs="0" name="TrnSalesTrnSalesOrderDetailItemDetailResult" nillable="true" type="q8:TrnSalesOrderDetailController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMstItemGroup">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMstItemGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" minOccurs="0" name="GetMstItemGroupResult" nillable="true" type="q9:ArrayOfMstItemGroupController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MinItemGroupId">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MinItemGroupIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MinItemGroupIdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMstItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemGroupId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMstItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" minOccurs="0" name="GetMstItemResult" nillable="true" type="q10:ArrayOfMstItemController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ItemComboBox">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ItemComboBoxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/pos13_app_data.Models" minOccurs="0" name="ItemComboBoxResult" nillable="true" type="q11:ArrayOfMstItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnitCombo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnitComboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" minOccurs="0" name="UnitComboResult" nillable="true" type="q12:ArrayOfMstUnitController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TaxCombo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TaxComboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" minOccurs="0" name="TaxComboResult" nillable="true" type="q13:ArrayOfMstTaxController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DiscountCombo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DiscountComboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" minOccurs="0" name="DiscountComboResult" nillable="true" type="q14:ArrayOfMstDiscountController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomerCombo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomerComboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" minOccurs="0" name="CustomerComboResult" nillable="true" type="q15:ArrayOfMstCustomerController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TermCombo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TermComboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" minOccurs="0" name="TermComboResult" nillable="true" type="q16:ArrayOfMstTermController" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InserSalesOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+        <xs:element minOccurs="0" name="PeriodId" type="xs:int" />
+        <xs:element minOccurs="0" name="SalesDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="SalesNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ManualInvoiceNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TableId" type="xs:int" />
+        <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+        <xs:element minOccurs="0" name="AccountId" type="xs:int" />
+        <xs:element minOccurs="0" name="TermId" type="xs:int" />
+        <xs:element minOccurs="0" name="DiscountId" type="xs:int" />
+        <xs:element minOccurs="0" name="SeniorCitizenId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeniorCitizenName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeniorCitizenAge" type="xs:int" />
+        <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SalesAgent" type="xs:int" />
+        <xs:element minOccurs="0" name="TerminalId" type="xs:int" />
+        <xs:element minOccurs="0" name="PreparedBy" type="xs:int" />
+        <xs:element minOccurs="0" name="CheckedBy" type="xs:int" />
+        <xs:element minOccurs="0" name="ApprovedBy" type="xs:int" />
+        <xs:element minOccurs="0" name="IsLocked" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsCancelled" type="xs:boolean" />
+        <xs:element minOccurs="0" name="PaidAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="CreditAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="DebitAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="BalanceAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="EntryUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="EntryDateTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="UpdateUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="UpdateDateTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Pax" type="xs:int" />
+        <xs:element minOccurs="0" name="Exec" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InserSalesOrderResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateInvoiceTotalAmount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InvoiceId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateInvoiceTotalAmountResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSalesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertSalesOrderLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesLineId" type="xs:int" />
+        <xs:element minOccurs="0" name="SalesId" type="xs:int" />
+        <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+        <xs:element minOccurs="0" name="UnitId" type="xs:int" />
+        <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+        <xs:element minOccurs="0" name="DiscountId" type="xs:int" />
+        <xs:element minOccurs="0" name="DiscountRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="DiscountAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="NetPrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Quantity" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TaxId" type="xs:int" />
+        <xs:element minOccurs="0" name="TaxRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TaxAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="SalesAccountId" type="xs:int" />
+        <xs:element minOccurs="0" name="AssetAccountId" type="xs:int" />
+        <xs:element minOccurs="0" name="CostAccountId" type="xs:int" />
+        <xs:element minOccurs="0" name="TaxAccountId" type="xs:int" />
+        <xs:element minOccurs="0" name="SalesLineTimeStamp" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+        <xs:element minOccurs="0" name="Preparation" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertSalesOrderLineResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSalesLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesLineId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSalesLineResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

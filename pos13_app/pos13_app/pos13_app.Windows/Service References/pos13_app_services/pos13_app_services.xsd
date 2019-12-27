@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/pos13_app_data.Controllers" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfMstTableController">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MstTableController" nillable="true" type="tns:MstTableController" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMstTableController" nillable="true" type="tns:ArrayOfMstTableController" />
+  <xs:complexType name="MstTableController">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LeftLocation" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TableCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TableGroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="TopLocation" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MstTableController" nillable="true" type="tns:MstTableController" />
+  <xs:complexType name="ArrayOfMstTableGroupController">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MstTableGroupController" nillable="true" type="tns:MstTableGroupController" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMstTableGroupController" nillable="true" type="tns:ArrayOfMstTableGroupController" />
+  <xs:complexType name="MstTableGroupController">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EntryDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EntryUserId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="TableGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MstTableGroupController" nillable="true" type="tns:MstTableGroupController" />
+  <xs:complexType name="ArrayOfTrnSalesOrderController">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrnSalesOrderController" nillable="true" type="tns:TrnSalesOrderController" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrnSalesOrderController" nillable="true" type="tns:ArrayOfTrnSalesOrderController" />
+  <xs:complexType name="TrnSalesOrderController">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AmountDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      <xs:element minOccurs="0" name="GrossAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="GrossAmountDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="InvoiceStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceTableId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LessAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LessAmountDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pax" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PreparedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesAgent" type="xs:int" />
+      <xs:element minOccurs="0" name="SalesDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SalesNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TableCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TermId" type="xs:int" />
+      <xs:element minOccurs="0" name="Terminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrnSalesOrderController" nillable="true" type="tns:TrnSalesOrderController" />
+  <xs:complexType name="ArrayOfTrnSalesOrderDetailController">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrnSalesOrderDetailController" nillable="true" type="tns:TrnSalesOrderDetailController" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrnSalesOrderDetailController" nillable="true" type="tns:ArrayOfTrnSalesOrderDetailController" />
+  <xs:complexType name="TrnSalesOrderDetailController">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AmountDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DiscountId" type="xs:int" />
+      <xs:element minOccurs="0" name="DiscountRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      <xs:element minOccurs="0" name="NetPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PriceDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:decimal" />
+      <xs:element minOccurs="0" name="QuantityDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesItemId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TaxId" type="xs:int" />
+      <xs:element minOccurs="0" name="TaxRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrnSalesOrderDetailController" nillable="true" type="tns:TrnSalesOrderDetailController" />
+  <xs:complexType name="ArrayOfMstItemGroupController">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MstItemGroupController" nillable="true" type="tns:MstItemGroupController" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMstItemGroupController" nillable="true" type="tns:ArrayOfMstItemGroupController" />
+  <xs:complexType name="MstItemGroupController">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EntryDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EntryUserId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ImagePath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Islocked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KitchenReport" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MstItemGroupController" nillable="true" type="tns:MstItemGroupController" />
+  <xs:complexType name="ArrayOfMstItemController">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MstItemController" nillable="true" type="tns:MstItemController" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMstItemController" nillable="true" type="tns:ArrayOfMstItemController" />
+  <xs:complexType name="MstItemController">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Barcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="GenericName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ImagePath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsLocked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemGroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="MarkUp" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OutTaxId" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SalesAccountId" type="xs:int" />
+      <xs:element minOccurs="0" name="UnitId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MstItemController" nillable="true" type="tns:MstItemController" />
+  <xs:complexType name="ArrayOfMstUnitController">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MstUnitController" nillable="true" type="tns:MstUnitController" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMstUnitController" nillable="true" type="tns:ArrayOfMstUnitController" />
+  <xs:complexType name="MstUnitController">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MstUnitController" nillable="true" type="tns:MstUnitController" />
+  <xs:complexType name="ArrayOfMstTaxController">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MstTaxController" nillable="true" type="tns:MstTaxController" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMstTaxController" nillable="true" type="tns:ArrayOfMstTaxController" />
+  <xs:complexType name="MstTaxController">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountId" type="xs:int" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Rate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Tax" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MstTaxController" nillable="true" type="tns:MstTaxController" />
+  <xs:complexType name="ArrayOfMstDiscountController">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MstDiscountController" nillable="true" type="tns:MstDiscountController" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMstDiscountController" nillable="true" type="tns:ArrayOfMstDiscountController" />
+  <xs:complexType name="MstDiscountController">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateEnd" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateStart" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DayFri" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DayMon" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DaySat" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DaySun" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DayThu" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DayTue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DayWed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Discount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EntryDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EntryUserId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDateScheduled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDayScheduled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLocked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsTimeScheduled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsVatExemp" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsVatExempt" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TimeEnd" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TimeStart" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MstDiscountController" nillable="true" type="tns:MstDiscountController" />
+  <xs:complexType name="ArrayOfMstCustomerController">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MstCustomerController" nillable="true" type="tns:MstCustomerController" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMstCustomerController" nillable="true" type="tns:ArrayOfMstCustomerController" />
+  <xs:complexType name="MstCustomerController">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Customer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Term" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TermId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MstCustomerController" nillable="true" type="tns:MstCustomerController" />
+  <xs:complexType name="ArrayOfMstTermController">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MstTermController" nillable="true" type="tns:MstTermController" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMstTermController" nillable="true" type="tns:ArrayOfMstTermController" />
+  <xs:complexType name="MstTermController">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Term" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MstTermController" nillable="true" type="tns:MstTermController" />
+</xs:schema>

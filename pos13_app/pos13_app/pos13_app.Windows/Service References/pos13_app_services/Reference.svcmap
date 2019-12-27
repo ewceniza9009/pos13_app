@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3b8b074e-63c1-4b5d-af36-9fdcb47a4c2f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:20644/pos13_app_services.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="pos13_app_services.xsd" MetadataType="Schema" ID="13593a93-34fc-4095-8ff0-8dadd58d26ea" SourceId="1" SourceUrl="http://localhost:20644/pos13_app_services.svc?xsd=xsd3" />
+    <MetadataFile FileName="pos13_app_services1.xsd" MetadataType="Schema" ID="da6a8e65-3fbe-456e-aee0-f9ce3d035a76" SourceId="1" SourceUrl="http://localhost:20644/pos13_app_services.svc?xsd=xsd4" />
+    <MetadataFile FileName="pos13_app_services.disco" MetadataType="Disco" ID="47bd47d9-a125-44b4-b9d5-2157fb491faa" SourceId="1" SourceUrl="http://localhost:20644/pos13_app_services.svc?disco" />
+    <MetadataFile FileName="pos13_app_services2.xsd" MetadataType="Schema" ID="aca7b0d1-807e-43c4-8b78-279e06da1133" SourceId="1" SourceUrl="http://localhost:20644/pos13_app_services.svc?xsd=xsd1" />
+    <MetadataFile FileName="pos13_app_services3.xsd" MetadataType="Schema" ID="fe8e396f-a93c-4221-8e11-53ddbca7033e" SourceId="1" SourceUrl="http://localhost:20644/pos13_app_services.svc?xsd=xsd0" />
+    <MetadataFile FileName="Pos13_app_service.wsdl" MetadataType="Wsdl" ID="94dcc25d-5ebf-41b9-b56b-688edfbe6135" SourceId="1" SourceUrl="http://localhost:20644/pos13_app_services.svc?wsdl" />
+    <MetadataFile FileName="pos13_app_services4.xsd" MetadataType="Schema" ID="4fd3e02b-9e9f-45b0-8bfc-b3e297ead90d" SourceId="1" SourceUrl="http://localhost:20644/pos13_app_services.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="pos13_app.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:pos13_app"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox HorizontalAlignment="Left" Margin="563,275,0,0" Name="UserNameMem" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="255"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="563,321,0,0" Name="PasswordMem" VerticalAlignment="Top" Width="255"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="558,367,0,0" Name="cmdLogin" VerticalAlignment="Top"  Width="134" Click="cmdLogin_Click"/>
+        <Button Content="Quit" HorizontalAlignment="Left" Margin="686,367,0,0" x:Name="cmdQuit" VerticalAlignment="Top" Click="cmdQuit_Click" Width="134"/>
+
+    </Grid>
+</Page>

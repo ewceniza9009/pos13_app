@@ -1,0 +1,125 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="pos13_app.SysSalesOrder"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:pos13_app"
+    xmlns:common="using:pos13_app.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:system="using:System"
+    xmlns:modules="using:pos13_app.Modules"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">My Application</x:String>
+    </Page.Resources>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Name="ButtonsGrid">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <!--<EntranceThemeTransition/>-->
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="backButton" Margin="43,53,0,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Top"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button" RenderTransformOrigin="-0.161,-0.129"/>
+            <TextBlock x:Name="pageTitle" Text="POS Touch" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="10,0,668,46"/>
+            <Button x:Name="cmdClose" Content="Close" Background="DarkRed" BorderThickness="1" FontSize="18" Grid.Column="1" HorizontalAlignment="Right" Width="100" VerticalAlignment="Top" Click="cmdClose_Click"/>
+        </Grid>
+        <Button x:Name="CmdPreviousTableGroup" Content="&lt;" HorizontalAlignment="Left" Margin="7,7,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="50" Click="CmdPreviousTableGroup_Click" BorderThickness="1"/>
+        <Button x:Name="CmdTableGroup01" Content="" HorizontalAlignment="Left" Margin="56,7,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="CmdTableGroup01_Click" BorderThickness="1"/>
+        <Button x:Name="CmdTableGroup02" Content="" HorizontalAlignment="Left" Margin="155,7,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="CmdTableGroup02_Click" BorderThickness="1"/>
+        <Button x:Name="CmdTableGroup03" Content="" HorizontalAlignment="Left" Margin="254,7,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="CmdTableGroup03_Click" BorderThickness="1"/>
+        <Button x:Name="CmdTableGroup04" Content="" HorizontalAlignment="Left" Margin="353,7,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="CmdTableGroup04_Click" BorderThickness="1"/>
+        <Button x:Name="CmdTableGroup05" Content="" HorizontalAlignment="Left" Margin="452,7,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="CmdTableGroup05_Click" BorderThickness="1"/>
+        <Button x:Name="CmdTableGroup06" Content="" HorizontalAlignment="Left" Margin="551,7,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="CmdTableGroup06_Click" BorderThickness="1"/>
+        <Button x:Name="CmdNextTableGroup" Content="&gt;" HorizontalAlignment="Left" Margin="650,7,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="50" Click="CmdNextTableGroup_Click" BorderThickness="1"/>
+        <Button x:Name="CmdPreviousTable" Content="&lt;" HorizontalAlignment="Left" Margin="7,96,0,0" Grid.Row="1" VerticalAlignment="Top" Height="446" Width="50" Click="CmdPreviousTable_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable01" Content="" HorizontalAlignment="Left" Margin="56,96,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable01_Click"/>
+        <Button x:Name="cmdTable02" Content="" HorizontalAlignment="Left" Margin="155,96,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable02_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable03" Content="" HorizontalAlignment="Left" Margin="254,96,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable03_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable04" Content="" HorizontalAlignment="Left" Margin="353,96,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable04_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable05" Content="" HorizontalAlignment="Left" Margin="452,96,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable05_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable06" Content="" HorizontalAlignment="Left" Margin="551,96,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable06_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable07" Content="" HorizontalAlignment="Left" Margin="56,185,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable07_Click" BorderThickness="1" />
+        <Button x:Name="cmdTable08" Content="" HorizontalAlignment="Left" Margin="155,185,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable08_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable09" Content="" HorizontalAlignment="Left" Margin="254,185,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable09_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable10" Content="" HorizontalAlignment="Left" Margin="353,185,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable10_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable11" Content="" HorizontalAlignment="Left" Margin="452,185,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable11_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable12" Content="" HorizontalAlignment="Left" Margin="551,185,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable12_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable13" Content="" HorizontalAlignment="Left" Margin="56,274,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable13_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable14" Content="" HorizontalAlignment="Left" Margin="155,274,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable14_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable15" Content="" HorizontalAlignment="Left" Margin="254,274,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable15_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable16" Content="" HorizontalAlignment="Left" Margin="353,274,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable16_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable17" Content="" HorizontalAlignment="Left" Margin="452,274,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable17_Click" BorderThickness="1" />
+        <Button x:Name="cmdTable18" Content="" HorizontalAlignment="Left" Margin="551,274,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable18_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable19" Content="" HorizontalAlignment="Left" Margin="56,363,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable19_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable20" Content="" HorizontalAlignment="Left" Margin="155,363,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable20_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable21" Content="" HorizontalAlignment="Left" Margin="254,363,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable21_Click"/>
+        <Button x:Name="cmdTable22" Content="" HorizontalAlignment="Left" Margin="353,363,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable22_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable23" Content="" HorizontalAlignment="Left" Margin="452,363,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable23_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable24" Content="" HorizontalAlignment="Left" Margin="551,363,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable24_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable25" Content="" HorizontalAlignment="Left" Margin="56,452,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable25_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable26" Content="" HorizontalAlignment="Left" Margin="155,452,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable26_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable27" Content="" HorizontalAlignment="Left" Margin="254,452,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable27_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable29" Content="" HorizontalAlignment="Left" Margin="452,452,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable29_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable28" Content="" HorizontalAlignment="Left" Margin="353,452,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable28_Click" BorderThickness="1"/>
+        <Button x:Name="cmdTable30" Content="" HorizontalAlignment="Left" Margin="551,452,0,0" Grid.Row="1" VerticalAlignment="Top" Height="90" Width="100" Click="cmdTable30_Click" BorderThickness="1"/>
+        <Button x:Name="CmdWalkIn" Tag="5"  Content="Walkin/Take-Out" HorizontalAlignment="Left" Margin="7,541,0,0" Grid.Row="1" VerticalAlignment="Top" Height="80" Width="347" Click="CmdWalkIn_Click" BorderThickness="1" />
+        <Button x:Name="CmdDelivery" Tag="36" Content="Delivery" HorizontalAlignment="Left" Margin="353,541,0,0" Grid.Row="1" VerticalAlignment="Top" Height="80" Width="347" Click="CmdDelivery_Click" BorderThickness="1"/>
+        <Button x:Name="cmdNextTable" Content="&gt;" HorizontalAlignment="Left" Margin="650,96,0,0" Grid.Row="1" VerticalAlignment="Top" Height="446" Width="50" Click="cmdNextTable_Click" BorderThickness="1"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="705,12,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Invoice Date" VerticalAlignment="Top" Height="32" Width="153" FontSize="14.667"/>
+        <DatePicker x:Name="SalesDate" HorizontalAlignment="Stretch" Margin="858,10,10,0" Grid.Row="1" VerticalAlignment="Top" DateChanged="SalesDate_DateChanged" />
+        <TextBlock HorizontalAlignment="Left" Margin="705,49,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Invoice Status" VerticalAlignment="Top" Height="32" Width="153" FontSize="14.667"/>
+        <ComboBox x:Name="InvoiceStatus" HorizontalAlignment="Left" SelectedValue="{Binding SelectedDirection, Mode=TwoWay}" SelectedValuePath="Tag" Margin="858,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="498" SelectionChanged="InvoiceStatus_SelectionChanged" >
+            <ComboBoxItem Content="Open"/>
+            <ComboBoxItem Content="Billed"/>
+            <ComboBoxItem Content="Collected"/>
+        </ComboBox>
+        <ListView x:Name="TrnSalesOrderList" ItemsSource="{Binding}"  HorizontalAlignment="Left" Height="519" Margin="702,98,0,0" Grid.Row="1" VerticalAlignment="Top" Width="654" SelectionChanged="TrnSalesOrderList_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="2">
+
+                        <Button x:Name="cmdEdit" Command="{Binding Id}" Content="Edit" Tag="{Binding InvoiceTableId}" BorderBrush="Gray" BorderThickness="1" Width="100" Height="90" Click="cmdEdit_Click">
+                        </Button>
+                        <Button x:Name="cmdDelete" Command="{Binding Id}" Content="Delete" Tag="{Binding Id}" BorderBrush="Gray" BorderThickness="1" Width="100" Height="90" Click="cmdDelete_Click">
+                        </Button>
+
+                        <StackPanel VerticalAlignment="Top" Margin="10,0,0,0" >
+                            <TextBlock x:Name="SalesNumber" Text="{Binding SalesNumber}" Margin="2"  Style="{StaticResource SubheaderTextBlockStyle}" />
+                            <TextBlock x:Name="Amount" Text="{Binding Amount}"  Margin="2" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                            <TextBlock x:Name="TableCode" Text="{Binding TableCode}" Margin="2" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                            <TextBlock x:Name="User" Text="{Binding User}" Margin="2" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
